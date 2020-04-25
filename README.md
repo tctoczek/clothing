@@ -10,3 +10,6 @@ Supported clothing pieces:
   /Tube top
   /Halter top
   /Bucket hat
+
+
+Default input and output is in inches.
