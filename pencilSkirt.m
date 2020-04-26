@@ -1,4 +1,4 @@
-function [waistCir, hipCir, skirtDepth, waistbHeight] = pencilSkirt(skirtLength, skirtHeight, zipLength, waistbLength, waistbWidth)
+function [skirtLength, skirtHeight, zipLength, waistbLength, waistbWidth] = pencilSkirt(waistCir, hipCir, skirtDepth, waistbHeight)
 %circleSkirt Summary of this function goes here
 %   List of variables
 %   Inputs: waistCir, hipCir, skirtDepth, waistbHeight
@@ -19,8 +19,8 @@ zipLength = ((1/2) * ( hipCir - waistCir )) + waistbHeight;
 % waistbLength = waistCir + 2*seamAllowance
 waistbLength = waistCir + (2*seamAllowance);
 
-%waistbWidth = waistbheight + hem + seamAllowance
-waistbWidth = waistbheight + hem + seamAllowance;
+%waistbWidth = waistbHeight + hem + seamAllowance
+waistbWidth = waistbHeight + hem + seamAllowance;
 
 
 end
