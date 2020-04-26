@@ -1,5 +1,6 @@
 function [topCut, bottomCut, innerCut, outerCut, garterLength, waistbLength, waistbWidth] = slipPants(waistCir, hipCir, calfCir, crotchHeight, pantLength, garterWidth)
-%circleSkirt Summary of this function goes here
+%slipPants() - Generates measurement values needed to create slip-on pants
+%following pattern pieces given
 %   List of variables
 %   Inputs: waistCir, hipCir, thighCir, calfCir, crotchHeight, pantLength, garterWidth
 %   Outputs: topCut, bottomCut, innerCut, outerCut, garterLength, waistbLength, waistbWidth

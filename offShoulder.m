@@ -1,5 +1,6 @@
 function [bodLength, bodWidth, sleeveLength, sleeveWidth, bodGarterTop, bodGarterBottom, sleeveGarter] = offShoulder(chestCir, bustCir, waistCir, topLength, armCir,sleeveL, garterWidth)
-%circleSkirt Summary of this function goes here
+%offShoulder() - Generates measurement values needed to create an off-shoulder top
+%following pattern pieces given
 %   List of variables
 %   Inputs: chestCir, bustCir, waistCir, topLength, armCir,
 %   sleeveL, garterWidth

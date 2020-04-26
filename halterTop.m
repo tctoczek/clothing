@@ -1,5 +1,7 @@
 function [bodLength, bodHeight, bodHalterHeight, bodHalterWidth, strapLength] = halterTop(waistCir, topLength, halterWidth, halterHeight)
-%circleSkirt Summary of this function goes here
+%halterTop() - Generates measurement values needed to create a halter top
+%piece following pattern pieces given
+%  
 %   List of variables
 %   Inputs: waistCir, topLength, halterWidth, halterHeight
 %   Outputs: bodLength, bodHeight, bodHalterHeight, bodHalterWidth,
