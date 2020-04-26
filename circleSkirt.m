@@ -1,6 +1,7 @@
 function [smallDiam, bigDiam, zipLength, waistbLength, waistbWidth] = circleSkirt(waistCir,hipCir, skirtLength, waistbHeight)
-%circleSkirt Summary of this function goes here
-%   List of variables
+%circleSkirt() - Generates measurement values needed to create pattern for circle skirt
+%piece following pattern pieces given
+%  
 %   Inputs: waistCir, hipCir, skirtLength, waistbHeight
 %   Outputs: bigDiam, smallDiam, zipLength, waistbLength, waistbWidth
 
