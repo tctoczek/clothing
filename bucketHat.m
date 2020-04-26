@@ -1,4 +1,4 @@
-function [headCir] = bucketHat(circleRad, hatHeight, brimWidth)
+function [circleRad, hatHeight, brimWidth] = bucketHat(headCir)
 %   List of variables
 %   Inputs: headCir
 %   Outputs: circleRad, hatHeight, brimWidth
