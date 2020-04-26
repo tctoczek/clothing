@@ -1,5 +1,7 @@
 function [skirtLength, skirtHeight, zipLength, waistbLength, waistbWidth] = pencilSkirt(waistCir, hipCir, skirtDepth, waistbHeight)
-%circleSkirt Summary of this function goes here
+%pencilSkirt() - Generates measurement values needed to create a pencil skirt pattern
+%piece following pattern pieces given
+%
 %   List of variables
 %   Inputs: waistCir, hipCir, skirtDepth, waistbHeight
 %   Outputs: skirtLength, skirtHeight, zipLength, waistbLength, waistbWidth
