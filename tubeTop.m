@@ -1,5 +1,6 @@
 function [bodLength, bodWidth, garterLength, garterWidth] = tubeTop(chestCir, bustCir, waistCir, topLength)
-%circleSkirt Summary of this function goes here
+%tubeTop() - Generates measurement values needed to create a sleeveless tube top pattern
+%piece following pattern pieces given
 %   List of variables
 %   Inputs: chestCir, bustCir, waistCir, topLength
 %   Outputs: bodLength, bodWidth, garterLength, garterWidth
