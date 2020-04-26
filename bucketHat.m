@@ -1,5 +1,6 @@
-function [circleRad, hatHeight, brimWidth] = bucketHat(headCir)
-%   List of variables
+function [circleRad, hatHeight, brimWidth] = bucketHat(headCir) 
+%bucketHat() - Generates measurement values needed to create a bucketHat pattern based on head circumfrence
+
 %   Inputs: headCir
 %   Outputs: circleRad, hatHeight, brimWidth
 
