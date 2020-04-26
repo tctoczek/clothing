@@ -1,4 +1,4 @@
-function [bigDiam, smallDiam, zipLength, waistbLength, waistbWidth] = circleSkirt(waistCir,hipCir, skirtLength, waistbHeight, zipper)
+function [smallDiam, bigDiam, zipLength, waistbLength, waistbWidth] = circleSkirt(waistCir,hipCir, skirtLength, waistbHeight)
 %circleSkirt Summary of this function goes here
 %   List of variables
 %   Inputs: waistCir, hipCir, skirtLength, waistbHeight
@@ -7,11 +7,11 @@ function [bigDiam, smallDiam, zipLength, waistbLength, waistbWidth] = circleSkir
 seamAllowance = 1/2;
 hem = 1;
 
-%bigDiam = 2*skirtLength + smallDiam + 2*seamAllowance + 2*hem
-bigDiam = (2*skirtLength) + smallDiam + 2*seamAllowance + 2*hem;
-
 %smallDiam = (waistCir+2*seamAllowance/pi)
 smallDiam = ((waistCir + (2*seamAllowance)) /pi);
+
+%bigDiam = 2*skirtLength + smallDiam + 2*seamAllowance + 2*hem
+bigDiam = (2*skirtLength) + smallDiam + 2*seamAllowance + 2*hem;
 
 %zipLength = (1/2)*(hipCir-waistCir)
 zipLength = (1/2)*(hipCir-waistCir);
@@ -23,4 +23,3 @@ wasitbLength = waistCir + (2*seamAllowance);
 waistbWidth = (waistbHeight) + seamAllowance + hem;
 
 end
-
