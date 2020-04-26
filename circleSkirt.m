@@ -13,8 +13,8 @@ smallDiam = ((waistCir + (2*seamAllowance)) /pi);
 %bigDiam = 2*skirtLength + smallDiam + 2*seamAllowance + 2*hem
 bigDiam = (2*skirtLength) + smallDiam + 2*seamAllowance + 2*hem;
 
-%zipLength = (1/2)*(hipCir-waistCir)
-zipLength = (1/2)*(hipCir-waistCir);
+%zipLength = (1/2)*(hipCir-waistCir) + waistbHeight
+zipLength = ((1/2) * ( hipCir - waistCir )) + waistbHeight;
 
 %waistbLength = waistCir + 2*seamAllowance
 wasitbLength = waistCir + (2*seamAllowance);
