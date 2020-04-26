@@ -1,4 +1,4 @@
-function [replaceMeBasedOnVariableListBelow] = bucketHat(replaceMeBasedOnVariableListBelow)
+function [headCir] = bucketHat(circleRad, hatHeight, brimWidth)
 %   List of variables
 %   Inputs: headCir
 %   Outputs: circleRad, hatHeight, brimWidth
