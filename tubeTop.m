@@ -1,4 +1,4 @@
-function [chestCir, bustCir, waistCir, topLength] = tubeTop(bodLength, bodWidth, garterLength, garterWidth)
+function [bodLength, bodWidth, garterLength, garterWidth] = tubeTop(chestCir, bustCir, waistCir, topLength)
 %circleSkirt Summary of this function goes here
 %   List of variables
 %   Inputs: chestCir, bustCir, waistCir, topLength
@@ -8,7 +8,7 @@ seamAllowance = 3/8;
 hem = 1/2;
 
 % bodLength = topLength + 2*hem
-bodLength = topLength = (2*hem);
+bodLength = topLength + (2*hem);
 
 % bodWidth = bustCir + 2*seamAllowance
 bodWidth = bustCir + (2*seamAllowance);
