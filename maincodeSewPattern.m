@@ -5,7 +5,8 @@ clc
 %Sewing Pattern Generator
 %This program generates measurements for specific sewing patterns based on 
 %the users given body and preferred measurements, taking into account the
-%standard 3/8" seam allowance. 
+%standard 3/8" seam allowance. Choice for measurement units can also be
+%adjusted. 
 
 pieceChoice = input('What would you like to make today?\n Choose from the following:\n circle skirt, pencil skirt, slip-on pants, off-shoulder top, halter top, tube top, bucket hat\n', 's');
 
@@ -267,3 +268,5 @@ elseif pieceChoice == "bucket hat"
 else
     disp(strcat(pieceChoice, ' is an invalid choice'));
 end
+
+disp('To generate a new pattern, re-run the program.');
