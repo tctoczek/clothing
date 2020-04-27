@@ -1,18 +1,17 @@
 %Main Code
-clear all
 close all
 clc
+warning off;
 %Sewing Pattern Generator
 %This program generates measurements for specific sewing patterns based on 
 %the users given body and preferred measurements, taking into account the
-%standard 3/8" seam allowance. Choice for measurement units can also be
-%adjusted. 
+%standard 3/8" seam allowance. 
 
 pieceChoice = input('What would you like to make today?\n Choose from the following:\n circle skirt, pencil skirt, slip-on pants, off-shoulder top, halter top, tube top, bucket hat\n', 's');
 
 unitChoice = input('Would you like to put in measurements in inches or centimeters? [in/cm] \n', 's');
 
-disp(strcat('Type in your measurements to make your  ', pieceChoice));
+disp('Type in your measurements as prompted in unit chosen');
 
 if pieceChoice == "circle skirt"
 %Circle skirt function
@@ -21,18 +20,16 @@ if pieceChoice == "circle skirt"
     hipCir = input('Hip measurement: ');
     skirtLength = input('Desired skirt length: ');
     waistbHeight = input('Desired waistband thickness: ');
-    zipper = input('Desired/Available zipper length: ');
     
     if unitChoice == "cm"
         waistCir = cm2inch(waistCir);
         hipCir = cm2inch(hipCir);
         skirtLength = cm2inch(skirtLength);
         waistbHeight = cm2inch(waistbHeight);
-        zipper = cm2inch(zipper);
     end
     
     
-    [bigDiam, smallDiam, zipLength, waistbLength, waistbWidth] = circleSkirt(waistCir, hipCir, skirtLength, waistbHeight, zipper);
+    [bigDiam, smallDiam, zipLength, waistbLength, waistbWidth] = circleSkirt(waistCir, hipCir, skirtLength, waistbHeight);
     
     disp('Use the following measurements and pattern pieces in the image');
     
@@ -49,7 +46,8 @@ if pieceChoice == "circle skirt"
         disp('waistbLength: ' + string(waistbLength));
         disp('waistbWidth: ' + string(waistbWidth));
     end
-    imshow('CircleSkirt.jpg')
+    
+     imshow('CircleSkirt.jpg');
     
 elseif pieceChoice == "pencil skirt"
 %Pencil Skirt function
@@ -59,7 +57,7 @@ elseif pieceChoice == "pencil skirt"
     skirtDepth = input('Desired skirt length: ');
     waistbHeight = input('Desired waistband thickness: ');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         waistCir = cm2inch(waistCir);
         hipCir = cm2inch(hipCir);
         skirtDepth = cm2inch(skirtDepth);
@@ -70,7 +68,7 @@ elseif pieceChoice == "pencil skirt"
     
     disp('Use the following measurements and pattern pieces in the image');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         disp('skirtLength: ' + string(inch2cm(skirtLength)));
         disp('skirtHeight: ' + string(inch2cm(skirtHeight)));
         disp('zipLength: ' + string(inch2cm(zipLength)));
@@ -83,7 +81,8 @@ elseif pieceChoice == "pencil skirt"
         disp('waistbLength: ' + string(waistbLength));
         disp('waistbWidth: ' + string(waistbWidth));
     end
-    imshow('PencilSkirt.jpg')
+    
+     imshow('PencilSkirt.jpg');
     
 elseif pieceChoice == "slip-on pants"
     
@@ -94,7 +93,7 @@ elseif pieceChoice == "slip-on pants"
     pantLength = input('Desired pants length: ');
     garterWidth = input('Available garter width: ');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         waistCir = cm2inch(waistCir);
         hipCir = cm2inch(hipCir);
         calfCir = cm2inch(calfCir);
@@ -107,7 +106,7 @@ elseif pieceChoice == "slip-on pants"
     
     disp('Use the following measurements and pattern pieces in the image');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         disp('topCut: ' + string(inch2cm(topCut)));
         disp('bottomCut: ' + string(inch2cm(bottomCut)));
         disp('innerCut: ' + string(inch2cm(innerCut)));
@@ -123,7 +122,7 @@ elseif pieceChoice == "slip-on pants"
         disp('waistbWidth: ' + string(waistbWidth));
     end
     
-    imshow('SlipOnPants.jpg')
+     imshow('SlipOnPants.jpg');
     
    
 elseif pieceChoice == "off-shoulder top"
@@ -137,7 +136,7 @@ elseif pieceChoice == "off-shoulder top"
     sleeveL = input('Desired sleeve length: ');
     garterWidth = input('Available garter width: '); 
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         chestCir = cm2inch(chestCir);
         bustCir = cm2inch(bustCir);
         waistCir = cm2inch(waistCir);
@@ -151,7 +150,7 @@ elseif pieceChoice == "off-shoulder top"
     
     disp('Use the following measurements and pattern pieces in the image');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         disp('bodLength: ' + string(inch2cm(bodLength)));
         disp('bodWidth: ' + string(inch2cm(bodWidth)));
         disp('sleeveLength: ' + string(inch2cm(sleeveLength)));
@@ -169,7 +168,7 @@ elseif pieceChoice == "off-shoulder top"
         disp('sleeveGarter: ' + string(sleeveGarter));
     end
     
-    imshow('OffShoulder.jpg')
+     imshow('OffShoulder.jpg');
     
 elseif pieceChoice == "halter top"
 %Halter top function
@@ -179,18 +178,18 @@ elseif pieceChoice == "halter top"
     halterWidth = input('Desired halter (neckline) width: ');
     halterHeight = input('Desired halter height (from top end of desired length): '); 
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         waistCir = cm2inch(waistCir);
         topLength = cm2inch(topLength);
         halterWidth = cm2inch(halterWidth);
         halterHeight = cm2inch(halterHeight);
     end
     
-    [bodLength, bodHeight, bodHalterHeight, bodHalterWidth, strapLength] = halterTop(waistCir, topLength, halterWidth, halterHeight)
+    [bodLength, bodHeight, bodHalterHeight, bodHalterWidth, strapLength] = halterTop(waistCir, topLength, halterWidth, halterHeight);
     
     disp('Use the following measurements and pattern pieces in the image');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         disp('bodLength: ' + string(inch2cm(bodLength)));
         disp('bodHeight: ' + string(inch2cm(bodHeight)));
         disp('bodHalterHeight: ' + string(inch2cm(bodHalterHeight)));
@@ -204,7 +203,7 @@ elseif pieceChoice == "halter top"
         disp('strapLength: ' + string(strapLength));
     end
     
-    imshow('HalterTop.jpg')
+     imshow('HalterTop.jpg');
     
     
 elseif pieceChoice == "tube top"
@@ -215,7 +214,7 @@ elseif pieceChoice == "tube top"
     waistCir = input('Waist measurement: ');
     topLength = input('Desired top length: '); 
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         chestCir = cm2inch(chestCir);
         bustCir = cm2inch(bustCir);
         waistCir = cm2inch(waistCir);
@@ -226,7 +225,7 @@ elseif pieceChoice == "tube top"
     
     disp('Use the following measurements and pattern pieces in the image');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         disp('bodLength: ' + string(inch2cm(bodLength)));
         disp('bodWidth: ' + string(inch2cm(bodWidth)));
         disp('garterLength: ' + string(inch2cm(garterLength)));
@@ -238,14 +237,14 @@ elseif pieceChoice == "tube top"
         disp('garterWidth: ' + string(garterWidth));
     end
     
-    imshow('TubeTop.jpg')
+    imshow('TubeTop.jpg');
     
 elseif pieceChoice == "bucket hat"
 %Bucket hat function
 
     headCir = input('Head circumference measurement: ');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         headCir = cm2inch(headCir);
     end
     
@@ -253,7 +252,7 @@ elseif pieceChoice == "bucket hat"
     
     disp('Use the following measurements and pattern pieces in the image');
     
-    if unitChoice == 'cm'
+    if unitChoice == "cm"
         disp('circleRad: ' + string(inch2cm(circleRad)));
         disp('hatHeight: ' + string(inch2cm(hatHeight)));
         disp('brimWidth: ' + string(inch2cm(brimWidth)));
@@ -263,10 +262,11 @@ elseif pieceChoice == "bucket hat"
         disp('brimWidth: ' + string(brimWidth));
     end
     
-    imshow('BucketHat.jpg')
-    
+     imshow('BucketHat.jpg');
+
 else
     disp(strcat(pieceChoice, ' is an invalid choice'));
 end
 
+uiwait;
 disp('To generate a new pattern, re-run the program.');
