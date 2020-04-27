@@ -3,6 +3,7 @@ function [circleRad, hatHeight, brimWidth] = bucketHat(headCir)
 
 %   Inputs: headCir
 %   Outputs: circleRad, hatHeight, brimWidth
+%   - Therese Toczek
 
 seamAllowance = 3/8;
 hem = 1/2;

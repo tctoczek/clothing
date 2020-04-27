@@ -1,9 +1,11 @@
-function [topCut, bottomCut, innerCut, outerCut, garterLength, waistbLength, waistbWidth] = slipPants(waistCir, hipCir, calfCir, crotchHeight, pantLength, garterWidth)
+function [topCut, bottomCut, innerCut, outerCut, garterLength, waistbLength, waistbWidth]...
+    = slipPants(waistCir, hipCir, calfCir, crotchHeight, pantLength, garterWidth)
 %slipPants() - Generates measurement values needed to create slip-on pants
 %following pattern pieces given
 %   List of variables
 %   Inputs: waistCir, hipCir, thighCir, calfCir, crotchHeight, pantLength, garterWidth
 %   Outputs: topCut, bottomCut, innerCut, outerCut, garterLength, waistbLength, waistbWidth
+%   - Satomi Sugita
 
 seamAllowance = 3/8;
 

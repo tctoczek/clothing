@@ -1,4 +1,5 @@
-function [bodLength, bodWidth, sleeveLength, sleeveWidth, bodGarterTop, bodGarterBottom, sleeveGarter] = offShoulder(chestCir, bustCir, waistCir, topLength, armCir,sleeveL, garterWidth)
+function [bodLength, bodWidth, sleeveLength, sleeveWidth, bodGarterTop, bodGarterBottom, sleeveGarter]...
+    = offShoulder(chestCir, bustCir, waistCir, topLength, armCir,sleeveL, garterWidth)
 %offShoulder() - Generates measurement values needed to create an off-shoulder top
 %following pattern pieces given
 %   List of variables
@@ -6,6 +7,7 @@ function [bodLength, bodWidth, sleeveLength, sleeveWidth, bodGarterTop, bodGarte
 %   sleeveL, garterWidth
 %   Outputs: bodLength, bodWidth, sleeveLength, sleeveWidth, bodGarterTop,
 %   bodGarterBottom, sleeveGarter
+%   - Satomi Sugita
 
 seamAllowance = 3/8;
 

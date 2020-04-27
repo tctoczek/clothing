@@ -33,14 +33,14 @@ if pieceChoice == "circle skirt"
     end
     
     
-    [bigDiam, smallDiam, zipLength, waistbLength, waistbWidth] = ...
+    [smallDiam, bigDiam, zipLength, waistbLength, waistbWidth] = ...
         circleSkirt(waistCir, hipCir, skirtLength, waistbHeight);
     
     disp('Use the following measurements and pattern pieces in the image');
     
     if unitChoice == "cm"
-        disp('bigDiam: ' + string(inch2cm(bigDiam)));
         disp('smallDiam: ' + string(inch2cm(smallDiam)));
+        disp('bigDiam: ' + string(inch2cm(bigDiam)));
         disp('zipLength: ' + string(inch2cm(zipLength)));
         disp('waistbLength: ' + string(inch2cm(waistbLength)));
         disp('waistbWidth: ' + string(inch2cm(waistbWidth)));
@@ -226,18 +226,16 @@ elseif pieceChoice == "tube top"
 
     chestCir = input('Chest measurement: ');
     bustCir = input('Bust measurement: ');
-    waistCir = input('Waist measurement: ');
     topLength = input('Desired top length: '); 
     
     if unitChoice == "cm"
         chestCir = cm2inch(chestCir);
         bustCir = cm2inch(bustCir);
-        waistCir = cm2inch(waistCir);
         topLength = cm2inch(topLength);
     end
     
     [bodLength, bodWidth, garterLength, garterWidth] = ...
-        tubeTop(chestCir, bustCir, waistCir, topLength);
+        tubeTop(chestCir, bustCir, topLength);
     
     disp('Use the following measurements and pattern pieces in the image');
     
