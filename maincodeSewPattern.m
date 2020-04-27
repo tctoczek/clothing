@@ -82,6 +82,8 @@ elseif pieceChoice == "pencil skirt"
         disp('waistbWidth: ' + string(waistbWidth));
     end
     
+    disp('Stretch fabric is recommended to be used for this project');
+    
      imshow('PencilSkirt.jpg');
     
 elseif pieceChoice == "slip-on pants"
@@ -203,6 +205,8 @@ elseif pieceChoice == "halter top"
         disp('strapLength: ' + string(strapLength));
     end
     
+    disp('Stretch fabric is recommended to be used for this project');
+    
      imshow('HalterTop.jpg');
     
     
@@ -236,6 +240,8 @@ elseif pieceChoice == "tube top"
         disp('garterLength: ' + string(garterLength));
         disp('garterWidth: ' + string(garterWidth));
     end
+    
+    disp('Stretch fabric is recommended to be used for this project');
     
     imshow('TubeTop.jpg');
     
