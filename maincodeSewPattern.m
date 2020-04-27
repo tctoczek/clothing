@@ -7,9 +7,13 @@ warning off;
 %the users given body and preferred measurements, taking into account the
 %standard 3/8" seam allowance. 
 
-pieceChoice = input('What would you like to make today?\n Choose from the following:\n circle skirt, pencil skirt, slip-on pants, off-shoulder top, halter top, tube top, bucket hat\n', 's');
+pieceChoice = input(['What would you like to make today?\n'...
+    'Choose from the following:\n'... 
+    'circle skirt, pencil skirt, slip-on pants, '...
+    'off-shoulder top, halter top, tube top, bucket hat\n'], 's');
 
-unitChoice = input('Would you like to put in measurements in inches or centimeters? [in/cm] \n', 's');
+unitChoice = input(['Would you like to put in measurements in '...
+    'inches or centimeters? [in/cm] \n'], 's');
 
 disp('Type in your measurements as prompted in unit chosen');
 
@@ -29,7 +33,8 @@ if pieceChoice == "circle skirt"
     end
     
     
-    [bigDiam, smallDiam, zipLength, waistbLength, waistbWidth] = circleSkirt(waistCir, hipCir, skirtLength, waistbHeight);
+    [bigDiam, smallDiam, zipLength, waistbLength, waistbWidth] = ...
+        circleSkirt(waistCir, hipCir, skirtLength, waistbHeight);
     
     disp('Use the following measurements and pattern pieces in the image');
     
@@ -64,7 +69,8 @@ elseif pieceChoice == "pencil skirt"
         waistbHeight = cm2inch(waistbHeight);
     end
     
-    [skirtLength, skirtHeight, zipLength, waistbLength, waistbWidth] = pencilSkirt(waistCir, hipCir, skirtDepth, waistbHeight);
+    [skirtLength, skirtHeight, zipLength, waistbLength, waistbWidth] = ...
+        pencilSkirt(waistCir, hipCir, skirtDepth, waistbHeight);
     
     disp('Use the following measurements and pattern pieces in the image');
     
@@ -104,7 +110,8 @@ elseif pieceChoice == "slip-on pants"
         garterWidth = cm2inch(garterWidth);
     end
  
-    [topCut, bottomCut, innerCut, outerCut, garterLength, waistbLength, waistbWidth] = slipPants(waistCir, hipCir, calfCir, crotchHeight, pantLength, garterWidth);
+    [topCut, bottomCut, innerCut, outerCut, garterLength, waistbLength, waistbWidth]...
+        = slipPants(waistCir, hipCir, calfCir, crotchHeight, pantLength, garterWidth);
     
     disp('Use the following measurements and pattern pieces in the image');
     
@@ -148,7 +155,9 @@ elseif pieceChoice == "off-shoulder top"
         garterWidth = cm2inch(garterWidth);
     end
     
-    [bodLength, bodWidth, sleeveLength, sleeveWidth, bodGarterTop, bodGarterBottom, sleeveGarter] = offShoulder(chestCir, bustCir, waistCir, topLength, armCir,sleeveL, garterWidth);
+    [bodLength, bodWidth, sleeveLength, sleeveWidth,...
+        bodGarterTop, bodGarterBottom, sleeveGarter] = offShoulder(...
+        chestCir, bustCir, waistCir, topLength, armCir,sleeveL, garterWidth);
     
     disp('Use the following measurements and pattern pieces in the image');
     
@@ -178,7 +187,8 @@ elseif pieceChoice == "halter top"
     waistCir = input('Waist measurement: ');
     topLength = input('Desired top length: ');
     halterWidth = input('Desired halter (neckline) width: ');
-    halterHeight = input('Desired halter height (from top end of desired length): '); 
+    halterHeight = input(['Desired halter height'...
+        '(from top end of desired length): ']); 
     
     if unitChoice == "cm"
         waistCir = cm2inch(waistCir);
@@ -187,7 +197,8 @@ elseif pieceChoice == "halter top"
         halterHeight = cm2inch(halterHeight);
     end
     
-    [bodLength, bodHeight, bodHalterHeight, bodHalterWidth, strapLength] = halterTop(waistCir, topLength, halterWidth, halterHeight);
+    [bodLength, bodHeight, bodHalterHeight, bodHalterWidth, strapLength]...
+        = halterTop(waistCir, topLength, halterWidth, halterHeight);
     
     disp('Use the following measurements and pattern pieces in the image');
     
@@ -225,7 +236,8 @@ elseif pieceChoice == "tube top"
         topLength = cm2inch(topLength);
     end
     
-    [bodLength, bodWidth, garterLength, garterWidth] = tubeTop(chestCir, bustCir, waistCir, topLength);
+    [bodLength, bodWidth, garterLength, garterWidth] = ...
+        tubeTop(chestCir, bustCir, waistCir, topLength);
     
     disp('Use the following measurements and pattern pieces in the image');
     
